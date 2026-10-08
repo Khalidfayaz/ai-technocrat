@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Technocrat — 600 Hour AI Course | Khalid Fayaz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="logo">🧠</div>
+        <div>
+          <h1>AI <span>Technocrat</span></h1>
+          <p>600-Hour Vocational AI Syllabus</p>
+        </div>
+      </div>
+      <nav class="tabs" id="tabs">
+        <button data-view="home" class="active">🏠 Home</button>
+        <button data-view="syllabus">📚 Syllabus</button>
+        <button data-view="quiz">🎯 Quiz</button>
+      </nav>
+      <button class="icon-btn" id="themeBtn" title="Toggle theme">🌙</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HOME VIEW ================= -->
+    <section class="view active" id="view-home">
+      <div class="hero">
+        <span class="pill">⚡ Job-Ready Vocational Skills</span>
+        <h2>600-Hour <em>Practical &amp; Vocational</em><br/>AI Syllabus for ITIs</h2>
+        <p class="lead">
+          A hands-on, lab-oriented AI curriculum built for ITI trainees — from Python fundamentals to
+          Machine Learning, Deep Learning, NLP, Computer Vision, IoT &amp; Robotics.
+          Target: <b>job-ready AI technicians</b>, not theoretical researchers.
+        </p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" data-goto="syllabus">📚 Explore Syllabus</button>
+          <button class="btn btn-ghost" data-goto="quiz">🎯 Start Quiz</button>
+        </div>
+        <div class="stats">
+          <div class="stat"><b>600</b><span>Total Hours</span></div>
+          <div class="stat"><b>12</b><span>Modules</span></div>
+          <div class="stat"><b id="statQ">0</b><span>MCQ Questions</span></div>
+          <div class="stat"><b>100%</b><span>Practical Focus</span></div>
+        </div>
+      </div>
+
+      <div class="sec-head">
+        <h3>📦 Course Modules</h3>
+        <div class="line"></div>
+        <span class="count-chip">Tap any card to open topics</span>
+      </div>
+      <div class="module-grid" id="moduleGrid"></div>
+    </section>
+
+    <!-- ================= SYLLABUS VIEW ================= -->
+    <section class="view" id="view-syllabus">
+      <div class="syllabus-layout">
+        <aside class="side">
+          <div class="search-wrap">
+            <span>🔍</span>
+            <input type="text" id="searchInput" placeholder="Search any topic..." autocomplete="off"/>
+          </div>
+          <div class="side-list" id="sideList"></div>
+        </aside>
+        <div class="content-panel" id="contentPanel"></div>
+      </div>
+    </section>
+
+    <!-- ================= QUIZ VIEW ================= -->
+    <section class="view" id="view-quiz">
+      <div class="quiz-shell" id="quizShell"></div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="foot-inner">
+      <div class="made-by">
+        <div class="avatar">KF</div>
+        <div>
+          <b>Website made by KHALID FAYAZ</b>
+          <small>AI Technocrat · 600-Hour Vocational AI Syllabus</small>
+        </div>
+      </div>
+      <div class="foot-note">
+        Hands-on Lab &amp; Skill Application Focus<br/>
+        <span id="footYear"></span> · Built for ITI Trainees
+      </div>
+    </div>
+  </footer>
+
+  <!-- Load data first, then logic -->
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
