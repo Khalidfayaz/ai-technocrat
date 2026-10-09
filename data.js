@@ -6,65 +6,75 @@ const MODULES = [
   id:1, icon:"🤖", title:"Fundamentals of AI & Responsible AI", hours:60,
   desc:"What AI is, how it evolved, where it is used, plus ethics, privacy and data basics.",
   topics:[
-    {t:"Introduction to Artificial Intelligence", h:6, n:[
-      "AI = making machines think, learn and take decisions like humans.",
-      "It is a branch of Computer Science that builds intelligent systems.",
-      "Examples: ChatGPT, Google Translate, Voice Assistants, spam filters."
-    ]},
-    {t:"History and evolution of AI", h:4, n:[
-      "1950 – Alan Turing proposed the Turing Test.",
-      "1956 – Dartmouth Conference; John McCarthy coined the term 'AI'.",
-      "AI winters → 2010s deep-learning boom → today's Generative AI."
-    ]},
-    {t:"AI terminology and concepts", h:5, n:[
-      "AI, Machine Learning, Deep Learning, NLP, Computer Vision.",
-      "Dataset, Model, Training, Testing, Inference, Algorithm.",
-      "AI is the big umbrella; ML and DL are subsets of it."
-    ]},
-    {t:"Applications of AI in different sectors", h:6, n:[
-      "Healthcare, agriculture, education, banking, transport, manufacturing, retail, security.",
-      "Examples: disease detection, crop monitoring, fraud detection, chatbots, self-driving cars."
-    ]},
-    {t:"Machine Learning fundamentals", h:8, n:[
-      "ML learns patterns from data instead of fixed manual rules.",
-      "Main types: Supervised, Unsupervised, Reinforcement learning.",
-      "Data is split into training and testing sets."
-    ]},
-    {t:"Neural-network fundamentals", h:5, n:[
-      "Inspired by the human brain — built from artificial neurons.",
-      "Structure: Input layer → Hidden layers → Output layer.",
-      "Weights and activation functions decide the output."
-    ]},
-    {t:"Introduction to NLP", h:5, n:[
-      "NLP = Natural Language Processing — AI that understands LANGUAGE.",
-      "Used in: ChatGPT, Google Translate, Voice Assistants, Gmail spam filter.",
-      "Key terms: Tokenization, Sentiment Analysis, Speech Recognition, Translation, Text Generation."
-    ]},
-    {t:"Introduction to Computer Vision", h:5, n:[
-      "Computer Vision = AI that understands IMAGES & VIDEOS.",
-      "Used in: Face Unlock, self-driving cars, medical imaging, security cameras, OCR.",
-      "Key terms: Image Classification, Object Detection, Face Recognition, OCR."
-    ]},
-    {t:"AI ethics and responsible AI", h:5, n:[
-      "Using AI in a fair, safe and responsible way.",
-      "Principles: Fairness, Transparency, Accountability, Privacy, Safety, Human Oversight.",
-      "Golden Rule: 'AI is a tool. Humans are responsible for how it is used.'"
-    ]},
-    {t:"Data privacy and security", h:3, n:[
-      "Privacy = proper use and control of personal data.",
-      "Security = protection of data from theft, loss or unauthorized access.",
-      "Rules: strong passwords, 2-factor authentication, never share OTP, regular backups."
-    ]},
-    {t:"Data collection and preparation", h:4, n:[
-      "Collect → Clean → Remove errors → Organize → Label → Prepare → Use for AI.",
-      "GIGO — Garbage In, Garbage Out: poor data gives poor AI results.",
-      "Good-quality data always gives better AI results."
-    ]},
-    {t:"Basic statistics for AI", h:4, n:[
-      "Mean, median, mode — understanding the centre of data.",
-      "Spread and variation of data values.",
-      "Why statistics matter before training any model."
-    ]}
+    {t:"Introduction to Artificial Intelligence", h:6, n:["Artificial Intelligence (AI) is a branch of computer science that enables machines to perform tasks that normally require human intelligence, such as learning, reasoning, problem-solving and understanding language.",
+      "Goals: perform intelligent tasks, solve problems, reduce repetitive work, analyze information and support decision-making.",
+      "Types: Narrow AI performs a specific task; General AI would perform a broad range of intellectual tasks like a human but has not been achieved; Super AI is a hypothetical intelligence beyond humans in many areas.",
+      "Applications: healthcare (medical-image support), education (personalized tutoring), banking (fraud detection), agriculture (crop monitoring), transport (traffic prediction) and business (chatbots).",
+      "Advantages: speed, automation, consistency, large-scale data analysis and continuous availability. Limitations: errors, bias, privacy concerns, development costs and changing job roles.",
+      "Example: an email spam filter learns patterns in messages and predicts whether a new email is spam."]},
+    {t:"History and evolution of AI", h:4, n:["1950 — Alan Turing proposed a test for evaluating machine-like intelligent conversation, now commonly called the Turing Test.",
+      "1956 — The Dartmouth workshop helped establish AI as a research field; John McCarthy is associated with introducing the term Artificial Intelligence.",
+      "1960s–1970s — early AI programs and rule-based systems; 1980s — expert systems became popular for specialized problems.",
+      "1997 — IBM Deep Blue defeated chess champion Garry Kasparov. 2010s — deep learning improved image recognition, speech processing and translation.",
+      "2020s — Generative AI became widely used to create text, images, audio and code.",
+      "Stages: rule-based AI follows written rules; Machine Learning learns patterns from data; Deep Learning uses multilayer neural networks; Generative AI creates new content."]},
+    {t:"AI terminology and concepts", h:5, n:["Algorithm: step-by-step procedure. Data: information. Dataset: collection of related data. Model: system trained to predict, classify or generate outputs.",
+      "Training teaches a model from examples; inference means using a trained model to produce an output.",
+      "Machine Learning (ML) learns patterns from data. Deep Learning (DL) uses neural networks with many layers. A feature is an input property; a label is the correct answer in supervised learning.",
+      "Prompt: instructions given to an AI tool. Prediction: an estimate of a result. Automation: technology doing tasks with less manual effort. Bias: a systematic tendency that can cause unfair or inaccurate results.",
+      "Basic workflow: collect data → clean and prepare it → train a model → test/evaluate it → use it for predictions or outputs."]},
+    {t:"Applications of AI in different sectors", h:6, n:["Healthcare: supports medical-image analysis, patient monitoring and research. Education: personalized learning, tutoring and study-material preparation.",
+      "Agriculture: crop-health monitoring, plant-disease detection, yield estimation and smart irrigation. Banking: fraud detection, risk assessment and customer-service chatbots.",
+      "Transport: traffic prediction and route planning. Industry: quality inspection, inventory planning and repetitive-task automation. Security: unusual network activity detection.",
+      "Benefits: saves time, analyzes large datasets and supports decisions. Challenges: privacy risks, implementation costs, biased results, mistakes and the need for human supervision."]},
+    {t:"Machine Learning fundamentals", h:8, n:["Machine Learning is a branch of AI that learns patterns from data to make predictions or decisions without writing a separate rule for every case.",
+      "Supervised learning uses labelled examples. Classification predicts a category (spam/not spam); regression predicts a number (house price).",
+      "Unsupervised learning finds patterns in unlabelled data. Clustering groups similar items, such as customers with similar shopping habits.",
+      "Reinforcement learning learns through interaction with an environment and rewards or penalties; examples include game-playing systems and robot navigation.",
+      "Features are input properties; labels are target answers; training data teaches the model; testing data checks performance on unseen examples.",
+      "Workflow: collect → clean → choose algorithm → train → test → evaluate → deploy and monitor. Overfitting occurs when a model memorizes training data and performs poorly on new data.",
+      "Advantages: discovers patterns and supports predictions. Limitations: requires quality data, can learn bias and may need computing resources."]},
+    {t:"Neural-network fundamentals", h:5, n:["A neural network is a machine-learning model inspired by the way biological neurons process information.",
+      "Layers: input receives data; hidden layers process information and learn patterns; output layer produces the result.",
+      "Neuron: basic processing unit. Weights control the influence of inputs. Bias is an adjustable value. An activation function helps learn complex relationships.",
+      "A loss function measures prediction error. An epoch is one complete pass through the training dataset. During training, weights are adjusted to reduce error.",
+      "Deep Learning uses neural networks with multiple layers. Applications include image and speech recognition, language processing, medical-image analysis and generative AI."]},
+    {t:"Introduction to NLP", h:5, n:["Natural Language Processing (NLP) helps computers process, understand and generate human language, including text and speech-related tasks.",
+      "Tokenization splits text into smaller units. Sentiment analysis identifies positive, negative or neutral opinions. Text classification assigns categories.",
+      "Machine translation converts text between languages. Summarization creates a shorter text. Named Entity Recognition finds people, places and organizations in text.",
+      "Applications: chatbots, voice assistants, translation, spam filtering, search engines, text summaries and customer-feedback analysis.",
+      "Limitations: context, sarcasm and idioms can be difficult; performance varies by language; generative systems may produce incorrect information."]},
+    {t:"Introduction to Computer Vision", h:5, n:["Computer Vision enables computers to analyze and interpret images and videos.",
+      "Image classification predicts an image category. Object detection identifies objects and their locations. Segmentation divides an image into meaningful regions or pixels.",
+      "Face recognition compares facial features for identification or verification. OCR (Optical Character Recognition) extracts text from photos and scanned documents.",
+      "Workflow: collect images → prepare/label data → train a model → analyze a new image → evaluate results.",
+      "Applications: healthcare imaging, traffic monitoring, factory inspection, agriculture, security and document reading. Poor lighting, blurry images, biased data and privacy issues are challenges."]},
+    {t:"AI ethics and responsible AI", h:5, n:["AI ethics studies principles guiding the moral use of AI. Responsible AI means designing and using AI fairly, safely and accountably.",
+      "Fairness avoids unjust discrimination. Transparency provides appropriate explanations. Accountability means people and organizations remain responsible.",
+      "Privacy protects personal information; safety and reliability require testing and monitoring; human oversight keeps people involved in important decisions.",
+      "Common issues include biased results, privacy violations, misinformation, deepfakes, unclear explanations and uncertainty about responsibility.",
+      "Responsible practices: check AI outputs, use representative data, protect confidential information, disclose AI use when appropriate and monitor errors.",
+      "Example: a recruitment AI should be tested to ensure it does not unfairly disadvantage applicants because of gender or background."]},
+    {t:"Data privacy and security", h:3, n:["Data privacy concerns the proper collection, use, storage and sharing of personal information. Data security protects information from unauthorized access, theft, damage or loss.",
+      "Privacy focuses on appropriate use and data rights; security focuses on safeguards that protect data.",
+      "Sensitive data may include addresses, phone numbers, financial and medical records, passwords and biometric information.",
+      "Threats include phishing, malware, weak passwords, data breaches, unauthorized access and social engineering.",
+      "Protection: use strong unique passwords, enable multi-factor authentication, update software, restrict access, back up files and avoid suspicious links.",
+      "Do not enter passwords or confidential records into untrusted AI tools. Example: a school restricts student-record access to authorized staff."]},
+    {t:"Data collection and preparation", h:4, n:["Data collection gathers relevant information. Data preparation cleans, organizes and converts information into a suitable format for analysis or AI training.",
+      "Sources include surveys, sensors, databases, public datasets, business records, images, audio and video.",
+      "Steps: collect → integrate → clean errors and duplicates → handle missing values → label when needed → transform formats → split into training, validation and testing sets.",
+      "Data cleaning identifies incorrect values, inconsistent formats and duplicates. Missing values may be filled, estimated or removed when appropriate. Labelling attaches correct categories or answers.",
+      "Quality characteristics: accuracy, completeness, consistency, relevance and timeliness. GIGO means “Garbage In, Garbage Out”: poor input data can produce poor output.",
+      "Example: before predicting house prices, remove duplicate listings and correct invalid price values."]},
+    {t:"Basic statistics for AI", h:4, n:["Statistics is the study of collecting, organizing, analyzing and interpreting data. It helps summarize datasets and evaluate AI models.",
+      "Mean (average) = sum of values ÷ number of values. Example: 2, 4, 6 → mean = 4.",
+      "Median is the middle value after sorting. Example: 3, 5, 7 → median = 5. For an even number of values, average the two middle values.",
+      "Mode is the most frequent value. Example: 2, 3, 3, 4, 5 → mode = 3. Range = maximum − minimum; for 4, 8, 12 the range is 8.",
+      "Probability measures how likely an event is. For equally likely outcomes: favourable outcomes ÷ total outcomes. A fair coin has probability 1/2 of heads.",
+      "Variance measures spread around the mean using squared differences. Standard deviation is the square root of variance and uses the original units.",
+      "Correlation describes the strength and direction of a relationship: positive variables tend to increase together; negative variables tend to move in opposite directions. Correlation does not prove causation.",
+      "Statistics summarizes data, identifies patterns and unusual values, and helps compare model predictions with actual results."]}
   ]
 },
 {
